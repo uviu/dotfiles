@@ -1,0 +1,95 @@
+/* colors and fonts */
+* {
+    font: "JetBrains Mono 11";
+    b-color: #000000FF;
+    fg-color: #FFFFFFFF;
+    fgp-color: #888888FF;
+    hl-color: #FFFFFFFF;
+    hlt-color: #000000FF;
+    alt-color: #111111FF;
+    wbg-color: #000000CC;
+    w-border-color: #FFFFFFFF;
+}
+
+/*general configs*/
+configuration {
+    modi: "drun";
+    show-icons: true;
+    display-drun: "";
+}
+
+listview {
+    columns: 1;
+    lines: 3;
+    fixed-height: true;
+    fixed-columns: true;
+    cycle: false;
+    scrollbar: false;
+    border: 0px;
+}
+
+window {
+    transparency: "real";
+    width: 450px;
+    border-radius: 7;
+    background-color: @wbg-color;
+    border: 0px;
+    padding: 7px;
+}
+
+prompt {
+    text-color: @fg-color;
+}
+
+inputbar {
+    children: ["prompt", "entry"];
+    spacing: 10px;
+}
+
+entry {
+    placeholder: "application";
+    text-color: @fg-color;
+    placeholder-color: @fgp-color;
+}
+
+mainbox {
+    spacing: 10px;
+    margin: 0;
+    padding: 8px;
+    children: ["inputbar", "listview", "message"];
+}
+
+element {
+    spacing: 10px;
+    margin: 0;
+    padding: 8px;
+    border: 0px;
+    border-radius: 7px;
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+element normal.normal {
+	background-color: transparent;
+	text-color: @fg-color;
+}
+
+element alternate.normal {
+	background-color: transparent;
+	text-color: @fg-color;
+}
+
+element selected.active {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+element selected.normal {
+	background-color: @hl-color;
+	text-color: @hlt-color;
+}
+
+message {
+    background-color: @alt-color;
+    border: 0px solid;
+}
