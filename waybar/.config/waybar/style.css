@@ -1,0 +1,66 @@
+/* waybar */
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 11px;
+  min-height: 0;
+}
+
+window#waybar {
+  background-color: rgba(0, 0, 0, 0.8);;
+  color: #ffffff;
+}
+
+/* workspaces */
+#workspaces,
+
+#workspaces button {
+  color: #424242;
+}
+
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#workspaces button.active {
+    color: #ffffff
+}
+
+#workspaces button.urgent {
+  background-color: #eb4d4b;
+}
+
+.modules-left > widget:first-child > #workspaces {
+  margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+  margin-right: 0;
+}
+
+/* window */
+#window,
+
+/* clock */
+#clock {
+  /*TOP RIGHT BOTTOM LEFT*/
+  margin: 0 7 0 3px;
+  color: #ffffff;
+}
+
+/* battery */
+#battery {
+  margin: 0 7 0 3px;
+  color: #ffffff;
+}
+
+/* network */
+#network {
+    margin: 0 7 0 3px;
+    color: #ffffff;
+}
+
+#network.disconnected {
+    color: #424242;
+}

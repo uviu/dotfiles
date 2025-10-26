@@ -1,0 +1,29 @@
+{
+    "layer": "top",
+    "modules-left": ["hyprland/workspaces", "hyprland/mode"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["network", "battery", "clock"],
+
+    "hyprland/window": {
+        "max-length": 50
+    },
+
+    "network": {
+        "tooltip": false,
+        "format": "{icon} {essid}",
+        "format-icons": ["<small></small>"]
+    },
+
+    "battery": {
+        "interval": 1,
+        "tooltip": false,
+        "format": "{capacity}% {icon}",
+        "format-icons": ["", "", "", "", ""],
+        "format-charging": "{capacity}% <small></small>"
+    },
+
+    "clock": {
+        "tooltip": false,
+        "format": "{:%a, %d. %b  %H:%M}"
+    }
+}
