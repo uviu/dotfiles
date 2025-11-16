@@ -31,14 +31,14 @@ vim.keymap.set("v", "<A-j>", ":MoveBlock(1)<CR>", { desc = "Move Block Up" })
 vim.keymap.set("v", "<A-k>", ":MoveBlock(-1)<CR>", { desc = "Move Block Down" })
 
 -- telescope
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find files" })
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find files" })
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live grep" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 
 --conform
 vim.keymap.set("n", "<leader>cf", function()
-	require("conform").format({
-		lsp_format = "fallback",
-	})
+    require("conform").format({
+        lsp_format = "fallback",
+    })
 end, { desc = "Format current file" })
