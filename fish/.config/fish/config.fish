@@ -1,5 +1,5 @@
-#set theme
-fish_config theme choose nord
+# #set theme
+# fish_config theme choose nord
 
 #delete startup message
 set fish_greeting ""
