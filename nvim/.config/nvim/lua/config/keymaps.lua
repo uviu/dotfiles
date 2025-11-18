@@ -25,10 +25,10 @@ vim.keymap.set("n", "<C-h>", ":TmuxNavigateLeft<CR>", { desc = "Go to left tmux-
 vim.keymap.set("n", "<C-l>", ":TmuxNavigateRight<CR>", { desc = "Go to right tmux-pane" })
 
 -- move
-vim.keymap.set("n", "<A-j>", ":MoveLine(1)<CR>", { desc = "Move Line Up" })
-vim.keymap.set("n", "<A-k>", ":MoveLine(-1)<CR>", { desc = "Move Line Down" })
-vim.keymap.set("v", "<A-j>", ":MoveBlock(1)<CR>", { desc = "Move Block Up" })
-vim.keymap.set("v", "<A-k>", ":MoveBlock(-1)<CR>", { desc = "Move Block Down" })
+vim.keymap.set("n", "<A-j>", ":m .+1<CR>==", { desc = "Move Line Up" })
+vim.keymap.set("n", "<A-k>", ":m .-2<CR>==", { desc = "Move Line Down" })
+vim.keymap.set("v", "<A-j>", ":m '>+1<CR>gv=gv", { desc = "Move Block Up" })
+vim.keymap.set("v", "<A-k>", ":m '<-2<CR>gv=gv", { desc = "Move Block Down" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<cr>", { desc = "Find files" })
@@ -37,7 +37,7 @@ vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffer
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 
 --rename
-vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {desc = "Rename every Variableinstance"})
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename every Variableinstance" })
 
 --conform
 vim.keymap.set("n", "<leader>cf", function()
