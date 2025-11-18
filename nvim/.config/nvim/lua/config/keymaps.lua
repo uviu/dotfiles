@@ -36,6 +36,9 @@ vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Live
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Buffers" })
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Help tags" })
 
+--rename
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {desc = "Rename every Variableinstance"})
+
 --conform
 vim.keymap.set("n", "<leader>cf", function()
     require("conform").format({
