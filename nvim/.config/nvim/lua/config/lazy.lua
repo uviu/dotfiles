@@ -19,6 +19,9 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+-- autoreload files
+vim.o.autoread = true
+
 --enable clipboard use
 vim.opt.clipboard = "unnamedplus"
 
