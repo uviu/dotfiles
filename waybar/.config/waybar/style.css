@@ -46,18 +46,18 @@ window#waybar {
 #clock {
   /*TOP RIGHT BOTTOM LEFT*/
   margin: 0 7 0 3px;
-  color: #ffffff;
+  color: #fffff9;
 }
 
 /* battery */
 #battery {
-  margin: 0 7 0 3px;
-  color: #ffffff;
+    margin: 0 20 0 3px;
+    color: #ffffff;
 }
 
 /* network */
 #network {
-    margin: 0 7 0 3px;
+    margin: 0 9 0 3px;
     color: #ffffff;
 }
 

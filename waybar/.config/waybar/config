@@ -10,7 +10,7 @@
 
     "network": {
         "tooltip": false,
-        "format": "{icon} {essid}",
+        "format": "{icon}  {essid}",
         "format-icons": ["<small></small>"]
     },
 
