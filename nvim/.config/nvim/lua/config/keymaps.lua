@@ -41,7 +41,7 @@ vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "Rename every Var
 
 --conform
 vim.keymap.set("n", "<leader>cf", function()
-    require("conform").format({
-        lsp_format = "fallback",
-    })
+	require("conform").format({
+		lsp_format = "fallback",
+	})
 end, { desc = "Format current file" })
