@@ -70,6 +70,14 @@ return {
           map("<leader>d", vim.diagnostic.open_float, "Show diagnostic")
           map("[d", vim.diagnostic.goto_prev, "Previous diagnostic")
           map("]d", vim.diagnostic.goto_next, "Next diagnostic")
+
+          -- Format on save
+          vim.api.nvim_create_autocmd("BufWritePre", {
+            buffer = args.buf,
+            callback = function()
+              vim.lsp.buf.format({ bufnr = args.buf, async = false })
+            end,
+          })
         end,
       })
     end,

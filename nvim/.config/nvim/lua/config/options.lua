@@ -1,4 +1,5 @@
 -- Options
+vim.opt.shell = "/bin/sh" -- force POSIX shell so rg glob args like !.git don't break in nushell
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
