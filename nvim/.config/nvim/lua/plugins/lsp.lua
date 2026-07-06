@@ -20,6 +20,12 @@ return {
         update_in_insert = true,
       })
 
+      -- Hover handler with visible border
+      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+        border = "rounded",
+        max_width = 80,
+      })
+
       -- Default capabilities with blink.cmp
       local capabilities = require("blink.cmp").get_lsp_capabilities()
 
@@ -62,9 +68,13 @@ return {
             vim.keymap.set("n", keys, func, { buffer = args.buf, desc = desc })
           end
 
-          map("gd", vim.lsp.buf.definition, "Go to definition")
-          map("gr", vim.lsp.buf.references, "Show references")
-          map("K", vim.lsp.buf.hover, "Hover documentation")
+          map("gd", function() Snacks.picker.lsp_definitions({ include_current = true }) end, "Go to definition")
+          map("gr", function() Snacks.picker.lsp_references() end, "Show references")
+          map("gI", function() Snacks.picker.lsp_implementations() end, "Go to implementation")
+          map("gy", function() Snacks.picker.lsp_type_definitions() end, "Go to type definition")
+          -- K is auto-mapped by nvim 0.11 LSP defaults
+          map("<leader>fs", function() Snacks.picker.lsp_symbols() end, "Document symbols")
+          map("<leader>fS", function() Snacks.picker.lsp_workspace_symbols() end, "Workspace symbols")
           map("<leader>ca", vim.lsp.buf.code_action, "Code action")
           map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
           map("<leader>d", vim.diagnostic.open_float, "Show diagnostic")
