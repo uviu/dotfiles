@@ -1,12 +1,9 @@
 return {
-	"goolord/alpha-nvim",
-	dependencies = {
-		"echasnovski/mini.icons",
-		"nvim-lua/plenary.nvim",
-	},
-	config = function()
-		local alpha = require("alpha")
-		local startify = require("alpha.themes.startify")
-		alpha.setup(startify.config)
-	end,
+  "goolord/alpha-nvim",
+  event = "VimEnter",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
+  config = function()
+    local startify = require("alpha.themes.startify")
+    require("alpha").setup(startify.config)
+  end,
 }
