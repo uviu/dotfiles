@@ -10,9 +10,10 @@ return {
       preset = "super-tab",
       ["<C-p>"] = { "select_prev", "fallback" },
       ["<C-n>"] = { "select_next", "fallback" },
+      ["<C-k>"] = { "select_prev", "show_signature", "hide_signature", "fallback" },
+      ["<C-j>"] = { "select_next", "fallback" },
       ["<C-b>"] = { "scroll_documentation_up", "fallback" },
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
-      ["<C-k>"] = { "show_signature", "hide_signature", "fallback" },
       ["<C-d>"] = { "show_documentation", "hide_documentation", "fallback" },
     },
     appearance = {
