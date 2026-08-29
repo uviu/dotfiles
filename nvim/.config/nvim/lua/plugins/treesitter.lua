@@ -21,6 +21,8 @@ return {
       "vimdoc",
       "yaml",
       "svelte",
+      "rust",
+      "toml",
     },
     auto_install = true,
     highlight = { enable = true },

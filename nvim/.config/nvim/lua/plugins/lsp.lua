@@ -34,6 +34,7 @@ return {
           "lua_ls",
           "gopls",
           "svelte",
+          "rust_analyzer",
         },
         automatic_installation = true,
         handlers = {

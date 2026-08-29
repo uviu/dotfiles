@@ -1,5 +1,22 @@
 return {
   {
+    "echasnovski/mini.move",
+    version = false,
+    event = "VeryLazy",
+    opts = {
+      mappings = {
+        down = "<M-j>",
+        up = "<M-k>",
+        left = "",
+        right = "",
+        line_down = "<M-j>",
+        line_up = "<M-k>",
+        line_left = "",
+        line_right = "",
+      },
+    },
+  },
+  {
     "echasnovski/mini.pairs",
     version = false,
     event = "InsertEnter",
