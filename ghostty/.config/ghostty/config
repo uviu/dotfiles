@@ -1,0 +1,31 @@
+#theme
+theme = tokyonight
+
+#background
+background-opacity = 0.8
+background-blur = 90
+
+#font
+font-family = "JetBrainsMono NFM Regular"
+font-size = 14
+adjust-cell-height=20%
+
+#window
+window-padding-x = 10
+window-padding-y = 10
+window-decoration = true
+window-colorspace = "display-p3"
+window-padding-balance = true
+window-save-state = always
+
+maximize = true
+
+#cursor
+cursor-style=block
+
+mouse-scroll-multiplier = 2
+copy-on-select = clipboard
+macos-titlebar-style = transparent
+macos-option-as-alt = true
+
+
