@@ -26,6 +26,6 @@ cursor-style=block
 mouse-scroll-multiplier = 2
 copy-on-select = clipboard
 macos-titlebar-style = transparent
-macos-option-as-alt = true
+macos-option-as-alt = right
 
 
