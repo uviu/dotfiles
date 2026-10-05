@@ -26,3 +26,4 @@ vim.opt.winblend = 10 -- Floating window transparency
 vim.opt.scrolloff = 8 -- Lines of context
 vim.opt.sidescrolloff = 8 -- Columns of context
 vim.opt.fillchars = { eob = " " } -- Hide ~ on empty lines
+vim.opt.clipboard = "unnamedplus" -- sync with system clipboard
