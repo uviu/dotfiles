@@ -104,7 +104,7 @@ return {
 			end,
 			desc = "Search in buffer",
 		},
-		{ "<leader>gg", function() Snacks.lazygit() end, desc = "Lazygit" },
+		{ "<leader>gg", function() local d = vim.fn.expand('%:p:h') Snacks.lazygit({ cwd = Snacks.git.get_root(d) or d }) end, desc = "Lazygit" },
 		{ "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git log" },
 		{ "<leader>gL", function() Snacks.picker.git_log_file() end, desc = "Git log (file)" },
 		{ "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git status" },
