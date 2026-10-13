@@ -3,6 +3,7 @@ return {
   dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
     require("oil").setup({
+      watch_for_changes = true,
       default_file_explorer = true,
       view_options = {
         show_hidden = true,
